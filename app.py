@@ -1,6 +1,8 @@
 from flask import Flask, render_template, Response
 import cv2
-recognizer = cv2.face.LBPHFaceRecognizer_create()
+# recognizer = cv2.face.LBPHFaceRecognizer_create()
+recognizer = cv2.face.createLBPHFaceRecognizer()
+
 recognizer.read('trainer.yml')
 cascadePath = "Cascades/haarcascade_frontalface_default.xml"
 faceCascade = cv2.CascadeClassifier(cascadePath);
