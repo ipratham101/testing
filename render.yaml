@@ -1,0 +1,3 @@
+build:
+  - command: apt-get update
+  - command: apt-get install -y build-essential libatlas-base-dev
